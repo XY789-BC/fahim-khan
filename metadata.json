@@ -1,0 +1,8 @@
+{
+  "name": "FAHIM TRADERS — Welding Works & Steel Material Supply",
+  "description": "Specialized structural welding, custom home main gates, elevated solar structures, and prime iron and steel materials supply located at Nasirabad Mor, near Ataullah Grass, Bin Qasim, Karachi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
