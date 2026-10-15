@@ -2,10 +2,10 @@ import React from 'react';
 import { Shield, Sun, Warehouse, Lock, Layers, ArrowUpRight } from 'lucide-react';
 
 interface ServicesSectionProps {
-  onSelectServiceForEstimate: (category: 'gate' | 'solar' | 'shed' | 'grill') => void;
+  onScrollToContact?: () => void;
 }
 
-export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServiceForEstimate }) => {
+export const ServicesSection: React.FC<ServicesSectionProps> = () => {
   const services = [
     {
       num: '01',
@@ -98,13 +98,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                     </div>
 
                     {service.category !== 'materials' && (
-                      <button
-                        onClick={() => onSelectServiceForEstimate(service.category as any)}
+                      <a
+                        href="#contact"
                         className="text-xs font-medium text-neutral-400 hover:text-amber-400 flex items-center gap-1 transition-colors cursor-pointer"
                       >
-                        <span>Estimate</span>
+                        <span>Inquire</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
-                      </button>
+                      </a>
                     )}
                   </div>
 
@@ -133,13 +133,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
                 <div className="mt-8 pt-4 border-t border-neutral-800/80">
                   {service.category !== 'materials' ? (
-                    <button
-                      onClick={() => onSelectServiceForEstimate(service.category as any)}
+                    <a
+                      href="#contact"
                       className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-neutral-200 bg-neutral-800 hover:bg-neutral-700 hover:text-white rounded-lg transition-colors cursor-pointer"
                     >
-                      <span>Configure & Calculate {service.title.split(' ')[0]}</span>
+                      <span>Inquire About {service.title}</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-amber-500" />
-                    </button>
+                    </a>
                   ) : (
                     <a
                       href="#materials"

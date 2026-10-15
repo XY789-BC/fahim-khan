@@ -4,10 +4,10 @@ import { SHOWCASE_PROJECTS } from '../data/showcaseData';
 import { ShowcaseProject } from '../types';
 
 interface ShowcaseGalleryProps {
-  onSelectProjectForEstimate: (category: 'gate' | 'solar' | 'shed' | 'grill') => void;
+  onScrollToContact?: () => void;
 }
 
-export const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({ onSelectProjectForEstimate }) => {
+export const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [activeProject, setActiveProject] = useState<ShowcaseProject | null>(null);
 
@@ -152,13 +152,13 @@ export const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({ onSelectProjec
                           <span>View Full Blueprint Specs</span>
                         </button>
 
-                        <button
-                          onClick={() => onSelectProjectForEstimate('gate')}
+                        <a
+                          href="#contact"
                           className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-3 text-xs sm:text-sm font-bold text-neutral-950 bg-neutral-200 hover:bg-white rounded-xl transition-colors cursor-pointer"
                         >
-                          <span>Estimate Cost</span>
+                          <span>Order Custom Gate</span>
                           <ArrowUpRight className="w-4 h-4" />
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -244,13 +244,13 @@ export const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({ onSelectProjec
                     </button>
 
                     {project.category !== 'materials' && (
-                      <button
-                        onClick={() => onSelectProjectForEstimate(project.category as any)}
+                      <a
+                        href="#contact"
                         className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-bold text-neutral-950 bg-amber-500 hover:bg-amber-400 rounded-lg transition-colors cursor-pointer"
                       >
-                        <span>Estimate Cost</span>
+                        <span>Inquire Project</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
-                      </button>
+                      </a>
                     )}
                   </div>
                 </div>

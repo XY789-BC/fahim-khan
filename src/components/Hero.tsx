@@ -2,11 +2,10 @@ import React from 'react';
 import { ArrowRight, MessageSquare, ShieldCheck, Flame, Wrench, Sparkles } from 'lucide-react';
 
 interface HeroProps {
-  onScrollToEstimator: () => void;
   onScrollToInquiry: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onScrollToEstimator, onScrollToInquiry }) => {
+export const Hero: React.FC<HeroProps> = ({ onScrollToInquiry }) => {
   const heroImage = '/src/assets/images/hero_welding_fabrication_1791990205566.jpg';
 
   const handleWhatsAppDirect = () => {
@@ -79,13 +78,13 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToEstimator, onScrollToInqui
 
             {/* Action Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <button
-                onClick={onScrollToEstimator}
+              <a
+                href="#materials"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-bold text-neutral-950 bg-amber-500 hover:bg-amber-400 rounded-lg transition-colors shadow-lg shadow-amber-500/10 cursor-pointer whitespace-nowrap"
               >
-                <span>Calculate Project Estimate</span>
+                <span>Browse Steel Materials</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
 
               <button
                 onClick={handleWhatsAppDirect}

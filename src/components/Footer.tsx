@@ -28,8 +28,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenInquiriesModal }) => {
               Fabrication Services
             </h4>
             <ul className="space-y-2">
-              <li><a href="#estimator" className="hover:text-amber-400 transition-colors">Architectural Main Gates</a></li>
-              <li><a href="#estimator" className="hover:text-amber-400 transition-colors">Walkable Solar Pergolas</a></li>
+              <li><a href="#showcase" className="hover:text-amber-400 transition-colors">Architectural Main Gates</a></li>
+              <li><a href="#showcase" className="hover:text-amber-400 transition-colors">Walkable Solar Pergolas</a></li>
               <li><a href="#services" className="hover:text-amber-400 transition-colors">Industrial Warehouse Sheds</a></li>
               <li><a href="#services" className="hover:text-amber-400 transition-colors">Boundary Safety Grills</a></li>
               <li><a href="#services" className="hover:text-amber-400 transition-colors">Precision MIG & ARC Welding</a></li>

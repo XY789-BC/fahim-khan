@@ -4,13 +4,11 @@ import { ProjectInquiry } from '../types';
 
 interface InquiryHighlightBannerProps {
   inquiry: ProjectInquiry;
-  onOpenEstimatorWithDefaults: () => void;
   onOpenInquiriesModal: () => void;
 }
 
 export const InquiryHighlightBanner: React.FC<InquiryHighlightBannerProps> = ({
   inquiry,
-  onOpenEstimatorWithDefaults,
   onOpenInquiriesModal,
 }) => {
   const handleWhatsApp = () => {
@@ -79,13 +77,13 @@ export const InquiryHighlightBanner: React.FC<InquiryHighlightBannerProps> = ({
 
             {/* Right Quick Actions */}
             <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 shrink-0 pt-2 lg:pt-0">
-              <button
-                onClick={onOpenEstimatorWithDefaults}
+              <a
+                href="#contact"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-bold text-neutral-950 bg-amber-500 hover:bg-amber-400 rounded-lg transition-colors cursor-pointer whitespace-nowrap"
               >
-                <span>Calculate Scope & Cost</span>
+                <span>Submit Custom Inquiry</span>
                 <ChevronRight className="w-4 h-4" />
-              </button>
+              </a>
 
               <button
                 onClick={handleWhatsApp}

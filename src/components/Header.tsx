@@ -26,8 +26,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInquiriesModal, inquiryCou
           <a href="#materials" className="hover:text-amber-400 transition-colors whitespace-nowrap shrink-0">
             Materials
           </a>
-          <a href="#estimator" className="hover:text-amber-400 transition-colors whitespace-nowrap shrink-0">
-            Cost Estimator
+          <a href="#showcase" className="hover:text-amber-400 transition-colors whitespace-nowrap shrink-0">
+            Portfolio
           </a>
           <a href="#location" className="hover:text-amber-400 transition-colors whitespace-nowrap shrink-0">
             Location
