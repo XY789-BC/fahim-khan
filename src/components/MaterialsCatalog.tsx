@@ -186,7 +186,7 @@ export const MaterialsCatalog: React.FC<MaterialsCatalogProps> = ({ onQuickInqui
                 </div>
 
                 <div className="mt-4 flex items-baseline justify-between">
-                  <div className="text-xs text-neutral-400">Estimated Rate:</div>
+                  <div className="text-xs text-neutral-400">Stock Rate:</div>
                   <div className="text-sm font-bold text-white font-mono-numbers">
                     PKR {item.estimatedRatePKR.toLocaleString()} <span className="text-[11px] text-neutral-500 font-normal">{item.rateUnit}</span>
                   </div>

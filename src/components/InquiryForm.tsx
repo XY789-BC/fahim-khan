@@ -167,7 +167,7 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({ onSubmitInquiry }) => 
               Submit Project or Material Inquiry
             </h3>
             <p className="mt-1 text-xs text-neutral-400">
-              Provide your project scope or required iron/steel materials. We respond promptly with formal estimates.
+              Provide your project scope or required iron/steel materials. We respond promptly with formal quotes and site consultations.
             </p>
 
             {submitted ? (

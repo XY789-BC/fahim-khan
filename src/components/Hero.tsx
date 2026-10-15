@@ -79,10 +79,10 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToInquiry }) => {
             {/* Action Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <a
-                href="#materials"
+                href="#contact"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-bold text-neutral-950 bg-amber-500 hover:bg-amber-400 rounded-lg transition-colors shadow-lg shadow-amber-500/10 cursor-pointer whitespace-nowrap"
               >
-                <span>Browse Steel Materials</span>
+                <span>Request Project Quote</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 

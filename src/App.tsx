@@ -8,7 +8,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { InquiryHighlightBanner } from './components/InquiryHighlightBanner';
 import { ServicesSection } from './components/ServicesSection';
-import { Estimator } from './components/Estimator';
 import { MaterialsCatalog } from './components/MaterialsCatalog';
 import { ShowcaseGallery } from './components/ShowcaseGallery';
 import { InquiryForm } from './components/InquiryForm';
@@ -45,7 +44,6 @@ export default function App() {
     return [INITIAL_INQUIRY];
   });
 
-  const [estimatorCategory, setEstimatorCategory] = useState<'gate' | 'solar' | 'shed' | 'grill'>('gate');
   const [isInquiriesModalOpen, setIsInquiriesModalOpen] = useState(false);
 
   useEffect(() => {
@@ -76,14 +74,6 @@ export default function App() {
     setInquiries((prev) => prev.filter((item) => item.id !== id));
   };
 
-  const scrollToEstimatorWithCategory = (cat: 'gate' | 'solar' | 'shed' | 'grill') => {
-    setEstimatorCategory(cat);
-    const el = document.getElementById('estimator');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -96,7 +86,7 @@ export default function App() {
       `*FAHIM TRADERS INQUIRY*\n` +
       `Hello! I need a price quote and stock confirmation for: *${item.name}* (${item.gaugeOrSize}).\n` +
       `Standard length: ${item.standardLength}.\n` +
-      `Estimated rate: PKR ${item.estimatedRatePKR} ${item.rateUnit}.`
+      `Stock rate: PKR ${item.estimatedRatePKR} ${item.rateUnit}.`
     );
     window.open(`https://wa.me/923000127565?text=${text}`, '_blank');
   };
@@ -112,27 +102,17 @@ export default function App() {
       <main className="flex-1">
         {/* Hero Section */}
         <Hero
-          onScrollToEstimator={() => scrollToSection('estimator')}
           onScrollToInquiry={() => scrollToSection('contact')}
         />
 
         {/* Active Project Inquiry Spotlight */}
         <InquiryHighlightBanner
           inquiry={inquiries[0] || INITIAL_INQUIRY}
-          onOpenEstimatorWithDefaults={() => scrollToEstimatorWithCategory('gate')}
           onOpenInquiriesModal={() => setIsInquiriesModalOpen(true)}
         />
 
         {/* Core Services */}
-        <ServicesSection
-          onSelectServiceForEstimate={scrollToEstimatorWithCategory}
-        />
-
-        {/* Project Estimator & Scope Calculator */}
-        <Estimator
-          initialCategory={estimatorCategory}
-          onSaveInquiry={handleAddInquiry}
-        />
+        <ServicesSection />
 
         {/* Iron & Steel Materials Supply Catalog */}
         <MaterialsCatalog
@@ -140,9 +120,7 @@ export default function App() {
         />
 
         {/* Delivered Projects Showcase */}
-        <ShowcaseGallery
-          onSelectProjectForEstimate={scrollToEstimatorWithCategory}
-        />
+        <ShowcaseGallery />
 
         {/* Workshop & Depot Physical Location in Karachi */}
         <WorkshopLocationSection />

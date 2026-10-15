@@ -44,33 +44,3 @@ export interface ShowcaseProject {
   };
   summary: string;
 }
-
-export interface EstimateParameters {
-  category: 'gate' | 'solar' | 'shed' | 'grill';
-  
-  // Gate specific
-  gateWidthFt: number;
-  gateHeightFt: number;
-  gateStyle: 'fahim-signature-palace' | 'modern-slats' | 'heavy-wrought-iron' | 'laser-cut-panel' | 'simple-square-pipe';
-  gateGauge: '14-gauge-heavy' | '16-gauge-standard' | '18-gauge-economy';
-  gateType: 'sliding' | 'double-swing' | 'single-swing';
-  includeMotorization: boolean;
-  
-  // Solar specific
-  solarSystemCapacityKW: number;
-  solarStructureType: 'elevated-pergola-walkable' | 'standard-rooftop-l2' | 'heavy-ground-mount';
-  solarSteelType: 'hot-dip-galvanized' | 'mild-steel-primer';
-  solarWindRating: '120-kmh-standard' | '150-kmh-cyclone-resistant';
-  
-  // Shed specific
-  shedLengthFt: number;
-  shedWidthFt: number;
-  shedRoofType: 'corrugated-gi-sheet' | 'sandwich-insulated-panel' | 'fiberglass';
-  
-  // Grill specific
-  grillLinearFt: number;
-  grillHeightFt: number;
-  grillStyle: 'modern-horizontal' | 'security-spike-heavy' | 'ornamental-forged';
-
-  paintFinish: 'red-oxide-primer-only' | 'duco-matte-black' | 'epoxy-industrial-powder';
-}
