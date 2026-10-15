@@ -10,7 +10,6 @@ export interface ProjectInquiry {
   timestamp: string;
   status: 'New' | 'Contacted' | 'Quoted' | 'In Fabrication' | 'Delivered';
   notes?: string;
-  estimatedCostPKR?: number;
 }
 
 export interface MaterialItem {
@@ -21,7 +20,7 @@ export interface MaterialItem {
   dimensions: string;
   standardLength: string;
   weightPerUnitKg: number;
-  estimatedRatePKR: number; // approximate rate per unit or kg in PKR
+  ratePKR: number; // current rate per unit or kg in PKR
   rateUnit: 'per kg' | 'per length (20ft)' | 'per sheet (8x4ft)' | 'per piece';
   inStock: boolean;
   description: string;

@@ -253,11 +253,6 @@ export const InquiriesDashboardModal: React.FC<InquiriesDashboardModalProps> = (
                         <Mail className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                         <span className="truncate">{inq.email}</span>
                       </div>
-                      {inq.estimatedCostPKR && (
-                        <div className="mt-2 text-xs text-amber-400 font-mono-numbers font-bold">
-                          Est: PKR {inq.estimatedCostPKR.toLocaleString()}
-                        </div>
-                      )}
                     </div>
 
                     <div className="flex items-center gap-2 pt-3 border-t border-neutral-800">

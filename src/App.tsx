@@ -86,7 +86,7 @@ export default function App() {
       `*FAHIM TRADERS INQUIRY*\n` +
       `Hello! I need a price quote and stock confirmation for: *${item.name}* (${item.gaugeOrSize}).\n` +
       `Standard length: ${item.standardLength}.\n` +
-      `Stock rate: PKR ${item.estimatedRatePKR} ${item.rateUnit}.`
+      `Stock rate: PKR ${item.ratePKR} ${item.rateUnit}.`
     );
     window.open(`https://wa.me/923000127565?text=${text}`, '_blank');
   };
